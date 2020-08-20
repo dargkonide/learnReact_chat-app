@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
         io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
 
         callback();
-    })
+    }) 
 
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id);
